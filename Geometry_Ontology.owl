@@ -1,0 +1,52 @@
+
+Prefix(:=<http://www.semanticweb.org/shiva/ontologies/2024/12/geometry#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+
+Ontology(<http://www.semanticweb.org/shiva/ontologies/2024/12/geometry>
+    Declaration(Class(:Shape))
+    Declaration(Class(:Triangle))
+    Declaration(Class(:Square))
+    Declaration(Class(:Circle))
+    Declaration(ObjectProperty(:hasBase))
+    Declaration(ObjectProperty(:hasHeight))
+    Declaration(ObjectProperty(:hasSide))
+    Declaration(ObjectProperty(:hasRadius))
+    Declaration(DataProperty(:hasArea))
+    Declaration(DataProperty(:requiresFormula))
+
+    SubClassOf(:Triangle :Shape)
+    SubClassOf(:Square :Shape)
+    SubClassOf(:Circle :Shape)
+
+    ObjectPropertyDomain(:hasBase :Triangle)
+    ObjectPropertyRange(:hasBase xsd:decimal)
+    ObjectPropertyDomain(:hasHeight :Triangle)
+    ObjectPropertyRange(:hasHeight xsd:decimal)
+
+    ObjectPropertyDomain(:hasSide :Square)
+    ObjectPropertyRange(:hasSide xsd:decimal)
+
+    ObjectPropertyDomain(:hasRadius :Circle)
+    ObjectPropertyRange(:hasRadius xsd:decimal)
+
+    DataPropertyDomain(:hasArea :Shape)
+    DataPropertyRange(:hasArea xsd:decimal)
+    DataPropertyDomain(:requiresFormula :Shape)
+    DataPropertyRange(:requiresFormula xsd:string)
+
+    ClassAssertion(:Triangle :triangle1)
+    DataPropertyAssertion(:hasArea :triangle1 25.5)
+    ObjectPropertyAssertion(:hasBase :triangle1 5.0)
+    ObjectPropertyAssertion(:hasHeight :triangle1 10.0)
+
+    ClassAssertion(:Square :square1)
+    DataPropertyAssertion(:hasArea :square1 16.0)
+    ObjectPropertyAssertion(:hasSide :square1 4.0)
+
+    ClassAssertion(:Circle :circle1)
+    DataPropertyAssertion(:hasArea :circle1 28.27)
+    ObjectPropertyAssertion(:hasRadius :circle1 3.0)
+)

@@ -1,0 +1,35 @@
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Applicant a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
+ex:Embassy a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
+ex:Government a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
+ex:Major a rdfs:Class ;
+    rdfs:subClassOf ex:Applicant .
+
+ex:Minor a rdfs:Class ;
+    rdfs:subClassOf ex:Applicant .
+
+ex:Output_Documents a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
+ex:RegularDocuments a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
+ex:Service_Register a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
+ex:Thing a rdfs:Class .
+
+ex:e_Citizenship_service a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
+ex:e_GovtSystem a rdfs:Class ;
+    rdfs:subClassOf ex:Thing .
+
